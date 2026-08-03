@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>往期回顾 · Coffee Chat</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="scroll-progress"></div>
+
+  <!-- 导航栏 -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Coffee Chat</a>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="index.html#themes">主题</a>
+        <a href="about.html">关于</a>
+        <a href="archive.html">往期回顾</a>
+      </div>
+      <button class="nav-toggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay"></div>
+
+  <!-- 往期回顾 -->
+  <section class="section">
+    <div class="container">
+      <h1 class="archive-title">往期回顾</h1>
+      <p class="archive-desc">从第一杯咖啡到现在，完整的旅程记录。每一场都带着真实的对话和收获。</p>
+
+      <!-- 时间轴 -->
+      <div class="timeline" id="timeline-all"></div>
+    </div>
+  </section>
+
+  <!-- 活动现场照片 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">活动现场</h2>
+      <p class="section-desc">真实的围坐、真实的对话。点击照片可放大查看。</p>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-cta">
+        <h3>想来聊聊吗？</h3>
+        <p>下一场 Coffee Chat，给你留个位置。</p>
+        <div class="footer-qr">
+          <img class="footer-qr-img" src="assets/photos/wechat-qr.jpeg" alt="微信二维码">
+          <span class="footer-qr-label">扫码加主理人微信</span>
+        </div>
+        <a class="footer-btn" href="mailto:hi@coffeechat.club">联系主理人</a>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; 2026 Coffee Chat · 行业跨界交流沙龙</p>
+        <p>线下主题交流活动 · 10-15 人小范围深度对谈 · 杭州</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    // 渲染全部活动时间轴
+    const timelineContainer = document.getElementById('timeline-all');
+    renderTimeline(activities, timelineContainer, '');
+
+    // 渲染活动现场照片画廊
+    const galleryGrid = document.getElementById('gallery-grid');
+    if (galleryGrid) {
+      renderGallery(activities.slice().reverse(), galleryGrid, '');
+    }
+
+    // 为动态渲染的 reveal 元素重新绑定入场动画
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>

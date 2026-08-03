@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Chat · 行业跨界交流沙龙</title>
+  <meta name="description" content="郭仔 Coffee Chat · 行业跨界交流沙龙。邀请不同行业背景的参与者，以平等分享、互鉴经验为核心，通过线下咖啡场景，实现真实连接与共同成长。">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- 滚动进度条 -->
+  <div class="scroll-progress"></div>
+
+  <!-- 导航：Tab 式水平等分 -->
+  <nav class="nav nav-tabs">
+    <a href="#top" class="nav-tab active" data-nav="top">首页</a>
+    <a href="#about" class="nav-tab" data-nav="about">主理人</a>
+    <a href="#flow" class="nav-tab" data-nav="flow">流程</a>
+    <a href="#timeline" class="nav-tab" data-nav="timeline">旅程</a>
+    <a href="#faq" class="nav-tab" data-nav="faq">FAQ</a>
+  </nav>
+
+  <!-- 第一板块：品牌 Hero -->
+  <header class="hero" id="top">
+    <div class="hero-line"></div>
+    <div class="hero-content fade-in-up">
+      <h1 class="hero-title">郭仔 Coffee Chat</h1>
+      <p class="hero-sub">行业跨界交流沙龙</p>
+      <p class="hero-desc">邀请不同行业背景的参与者，以平等分享、互鉴经验为核心，通过线下咖啡场景，实现真实连接与共同成长。</p>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="向下滚动">↓</a>
+  </header>
+
+  <!-- 第二板块：关于主理人 + 常态化主题 -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">关于主理人</h2>
+      <div class="host-card reveal">
+        <div class="host-avatar"></div>
+        <div class="host-text">
+          <p>2026 年裸辞后发起 <strong>Coffee Chat</strong> 项目，以「小范围、有主题、深度对话」为核心形式，邀请不同行业背景的人线下见面交流。</p>
+          <p><strong>已办主题专场：</strong>一人公司专场 · 全女专场 · 自媒体专场 · gap 转型专场</p>
+          <p><strong>过往嘉宾/参与者（节选）：</strong>涵盖某上市公司 CFO、宠物行业年营收 2 亿企业主、几十万粉丝量级自媒体博主、国货美妆渠道负责人、AI 智能体独立创业者、电气工程师、有从 Vogue 出来的艺人造型师、也有负责 6000 万粉丝帐号的短视频商业化操盘手……</p>
+          <p><strong>活动理念：</strong>拒绝无效社交，坚持小人数制，确保每位参与者都能深度参与对话。相信「真诚需要物理距离」，线下面对面交流是线上无法替代的信任建立方式。</p>
+        </div>
+        <div class="host-qr">
+          <img class="host-qr-img" src="assets/photos/wechat-qr.jpeg" alt="主理人微信二维码">
+          <span class="host-qr-label">扫码加好友<br>备注 Coffee Chat</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="themes">
+    <div class="container">
+      <h2 class="section-title">常态化主题</h2>
+      <p class="section-desc">每场围绕一个主题，深度对谈。</p>
+      <div class="theme-grid" id="theme-grid"></div>
+    </div>
+  </section>
+
+  <!-- 活动流程 -->
+  <section class="section" id="flow">
+    <div class="container">
+      <h2 class="section-title">活动流程</h2>
+      <p class="section-desc">3 小时，四个环节，每个人都有机会被听到。</p>
+      <div class="theme-grid">
+        <a class="theme-card reveal" href="flow.html">
+          <div class="theme-color-block" style="background:#5B8DBF"></div>
+          <div class="theme-body">
+            <div class="theme-name">📋 Coffee Chat 活动流程</div>
+            <div class="theme-tagline">自我介绍 → 话题讨论 → 说出卡点 → 1v1 深度交流</div>
+          </div>
+          <span class="theme-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第三板块：旅程回顾 -->
+  <section class="section" id="timeline">
+    <div class="container">
+      <h2 class="section-title">旅程回顾</h2>
+      <p class="section-desc">从第一杯咖啡到现在，每一场都值得回看。</p>
+      <div class="timeline" id="timeline-container"></div>
+    </div>
+  </section>
+
+  <!-- 第四板块：常见问题 -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="section-title">常见问题</h2>
+      <div class="faq" id="faq-container"></div>
+    </div>
+  </section>
+
+  <!-- 第五板块：感谢观看 -->
+  <section class="section closing-section" id="thanks">
+    <div class="container closing-content">
+      <div class="closing-icon">☕</div>
+      <h2 class="closing-title">感谢你看到这里</h2>
+      <p class="closing-text">我们坚持做线下见面，因为有些话，隔着屏幕说不出来。</p>
+      <p class="closing-text">坐在一起，喝杯咖啡，看着对方的眼睛，你才会说出那些真正想说的话。</p>
+      <p class="closing-text">线上能传递信息，线下才能传递温度。</p>
+      <p class="closing-text closing-emphasis">Coffee Chat 会一直做下去——只要还有人愿意来聊。</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-cta">
+        <h3>想来聊聊吗？</h3>
+        <p>下一场 Coffee Chat，给你留个位置。</p>
+        <div class="footer-qr">
+          <img class="footer-qr-img" src="assets/photos/wechat-qr.jpeg" alt="微信二维码">
+          <span class="footer-qr-label">扫码加主理人微信</span>
+        </div>
+        <a class="footer-btn" href="mailto:hi@coffeechat.club">联系主理人</a>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; 2026 郭仔 Coffee Chat · 行业跨界交流沙龙</p>
+        <p>线下主题交流活动 · 10-15 人小范围深度对谈 · 杭州</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 旅程回顾：全部活动，简化模式（仅保留时间、主题、参与人数、金句）
+      const timelineContainer = document.getElementById('timeline-container');
+      if (timelineContainer) {
+        renderTimeline(activities.slice().reverse(), timelineContainer, '', true);
+      }
+
+      // 常态化主题：仅显示非隐藏主题
+      const themeGrid = document.getElementById('theme-grid');
+      if (themeGrid) {
+        const visibleThemes = themes.filter(t => !t.hidden);
+        themeGrid.innerHTML = visibleThemes.map((t, i) => `
+          <a class="theme-card reveal" href="themes/${t.slug}.html" style="transition-delay:${i * 80}ms">
+            <div class="theme-color-block" style="background:${t.accentColor}"></div>
+            <div class="theme-body">
+              <div class="theme-name">${t.name}</div>
+              <div class="theme-tagline">${t.tagline}</div>
+            </div>
+            <span class="theme-arrow">→</span>
+          </a>
+        `).join('');
+      }
+
+      // 常见问题
+      const faqContainer = document.getElementById('faq-container');
+      if (faqContainer) {
+        renderFAQItems(faqParticipate, faqContainer);
+      }
+
+      // Tab 导航 scroll-spy：滚动时高亮当前板块
+      const navTabs = document.querySelectorAll('.nav-tab[data-nav]');
+      const sections = ['top', 'about', 'flow', 'timeline', 'faq'].map(id => ({
+        id,
+        el: document.getElementById(id)
+      })).filter(s => s.el);
+
+      const updateActiveTab = () => {
+        let current = 'top';
+        const scrollY = window.scrollY + 120;
+        sections.forEach(s => {
+          if (s.el.offsetTop <= scrollY) current = s.id;
+        });
+        navTabs.forEach(tab => {
+          tab.classList.toggle('active', tab.dataset.nav === current);
+        });
+      };
+      window.addEventListener('scroll', updateActiveTab, { passive: true });
+      updateActiveTab();
+
+      // 为动态渲染的 reveal 元素绑定入场动画
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    });
+  </script>
+
+</body>
+</html>
