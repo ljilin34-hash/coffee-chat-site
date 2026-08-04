@@ -36,17 +36,32 @@
   <section class="section" id="about">
     <div class="container">
       <h2 class="section-title">关于主理人</h2>
-      <div class="host-card reveal">
-        <div class="host-avatar"></div>
-        <div class="host-text">
-          <p>2026 年裸辞后发起 <strong>Coffee Chat</strong> 项目，以「小范围、有主题、深度对话」为核心形式，邀请不同行业背景的人线下见面交流。</p>
-          <p><strong>已办主题专场：</strong>一人公司专场 · 全女专场 · 自媒体专场 · gap 转型专场</p>
-          <p><strong>过往嘉宾/参与者（节选）：</strong>涵盖某上市公司 CFO、宠物行业年营收 2 亿企业主、几十万粉丝量级自媒体博主、国货美妆渠道负责人、AI 智能体独立创业者、电气工程师、有从 Vogue 出来的艺人造型师、也有负责 6000 万粉丝帐号的短视频商业化操盘手……</p>
-          <p><strong>活动理念：</strong>拒绝无效社交，坚持小人数制，确保每位参与者都能深度参与对话。相信「真诚需要物理距离」，线下面对面交流是线上无法替代的信任建立方式。</p>
+      <!-- 海报卡片（点击展开主理人介绍） -->
+      <div class="poster-card reveal" id="posterCard" tabindex="0" role="button" aria-expanded="false" aria-label="点击查看主理人介绍">
+        <div class="poster-image" style="background-image: url('assets/photos/promo-poster.jpg')"></div>
+        <div class="poster-overlay">
+          <span class="poster-hint" id="posterHint">点击查看主理人介绍</span>
         </div>
-        <div class="host-qr">
-          <img class="host-qr-img" src="assets/photos/wechat-qr.jpeg" alt="主理人微信二维码">
-          <span class="host-qr-label">扫码加好友<br>备注 Coffee Chat</span>
+        <div class="poster-detail" id="posterDetail">
+          <div class="poster-detail-inner">
+            <div class="poster-detail-head">
+              <div class="poster-detail-avatar"></div>
+              <div class="poster-detail-meta">
+                <h3>郭仔</h3>
+                <p>Coffee Chat 发起人 · 浙江 · 杭州</p>
+              </div>
+            </div>
+            <div class="poster-detail-body">
+              <p>2026 年裸辞后发起 <strong>Coffee Chat</strong> 项目，以「小范围、有主题、深度对话」为核心形式，邀请不同行业背景的人线下见面交流。</p>
+              <p><strong>已办主题专场：</strong>一人公司专场 · 全女专场 · 自媒体专场 · AI 专场</p>
+              <p><strong>过往嘉宾/参与者（节选）：</strong>涵盖某上市公司 CFO、宠物行业年营收 2 亿企业主、几十万粉丝量级自媒体博主、国货美妆渠道负责人、AI 智能体独立创业者、电气工程师、有从 Vogue 出来的艺人造型师、也有负责 6000 万粉丝帐号的短视频商业化操盘手……</p>
+              <p><strong>活动理念：</strong>拒绝无效社交，坚持小人数制，确保每位参与者都能深度参与对话。相信「真诚需要物理距离」，线下面对面交流是线上无法替代的信任建立方式。</p>
+            </div>
+            <div class="poster-detail-qr">
+              <img src="assets/photos/wechat-qr.jpeg" alt="主理人微信二维码">
+              <span>扫码加好友<br>备注 Coffee Chat</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -184,6 +199,26 @@
         });
       }, { threshold: 0.15 });
       document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // 海报卡片点击展开/收起
+      const posterCard = document.getElementById('posterCard');
+      const posterHint = document.getElementById('posterHint');
+      if (posterCard) {
+        const togglePoster = () => {
+          const isExpanded = posterCard.classList.toggle('expanded');
+          posterCard.setAttribute('aria-expanded', isExpanded);
+          if (posterHint) {
+            posterHint.textContent = isExpanded ? '点击收起' : '点击查看主理人介绍';
+          }
+        };
+        posterCard.addEventListener('click', togglePoster);
+        posterCard.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            togglePoster();
+          }
+        });
+      }
     });
   </script>
 

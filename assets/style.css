@@ -856,6 +856,187 @@ a:hover { color: var(--primary-light); }
   text-align: center;
 }
 
+/* ===== 海报卡片（关于主理人） ===== */
+.poster-card {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: box-shadow 0.4s var(--transition-smooth), transform 0.4s var(--transition-smooth);
+  background: var(--bg-card);
+}
+.poster-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+.poster-card:focus-visible {
+  outline: 3px solid var(--primary-light);
+  outline-offset: 3px;
+}
+.poster-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s var(--transition-smooth), opacity 0.4s var(--transition-smooth);
+}
+.poster-card:hover .poster-image {
+  transform: scale(1.03);
+}
+.poster-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px 18px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: opacity 0.4s var(--transition-smooth);
+  pointer-events: none;
+}
+.poster-hint {
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 8px 20px;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  border-radius: 24px;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.25);
+  transition: all 0.3s var(--transition-smooth);
+}
+.poster-card:hover .poster-hint {
+  background: rgba(255,255,255,0.95);
+  color: var(--text);
+  border-color: rgba(255,255,255,0.95);
+}
+
+/* 展开状态 */
+.poster-card.expanded .poster-image {
+  opacity: 0;
+  transform: scale(1.1);
+  pointer-events: none;
+}
+.poster-card.expanded .poster-overlay {
+  opacity: 0;
+}
+.poster-card.expanded {
+  cursor: default;
+}
+.poster-card.expanded:hover {
+  transform: none;
+}
+
+/* 展开详情 */
+.poster-detail {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s var(--transition-smooth), opacity 0.4s var(--transition-smooth);
+}
+.poster-card.expanded .poster-detail {
+  max-height: 2000px;
+  opacity: 1;
+}
+.poster-detail-inner {
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.poster-detail-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+.poster-detail-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.poster-detail-avatar::before {
+  content: '☕';
+  font-size: 1.8em;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+.poster-detail-meta h3 {
+  font-size: 1.3em;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.poster-detail-meta p {
+  font-size: 0.85em;
+  color: var(--text-light);
+}
+.poster-detail-body p {
+  margin-bottom: var(--space-xs);
+  font-size: 0.95em;
+  line-height: 1.8;
+}
+.poster-detail-body p:last-child {
+  margin-bottom: 0;
+}
+.poster-detail-body strong {
+  color: var(--primary);
+}
+.poster-detail-qr {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+.poster-detail-qr img {
+  width: 96px;
+  height: 96px;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  background: #fff;
+}
+.poster-detail-qr span {
+  font-size: 0.82em;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* 移动端适配 */
+@media (max-width: 640px) {
+  .poster-detail-inner {
+    padding: 22px 18px 20px;
+  }
+  .poster-detail-head {
+    gap: 12px;
+  }
+  .poster-detail-avatar {
+    width: 52px;
+    height: 52px;
+  }
+  .poster-detail-meta h3 {
+    font-size: 1.15em;
+  }
+  .poster-detail-qr img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
 /* ===== 页脚二维码 ===== */
 .footer-qr {
   display: flex;
