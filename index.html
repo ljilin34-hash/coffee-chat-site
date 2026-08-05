@@ -3,126 +3,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee Chat · 行业跨界交流沙龙</title>
-  <meta name="description" content="郭仔 Coffee Chat · 行业跨界交流沙龙。邀请不同行业背景的参与者，以平等分享、互鉴经验为核心，通过线下咖啡场景，实现真实连接与共同成长。">
+  <title>郭仔 Coffee Chat · 12 人的线下行业跨界沙龙</title>
+  <meta name="description" content="一个 10-15 人、围绕一个主题、三小时的线下咖啡沙龙。没有主讲人，没有课件——每个参与者既是输出者，也是倾听者。杭州，几家合作咖啡馆轮流坐。">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-  <!-- 滚动进度条 -->
   <div class="scroll-progress"></div>
 
-  <!-- 导航：Tab 式水平等分 -->
-  <nav class="nav nav-tabs">
-    <a href="#top" class="nav-tab active" data-nav="top">首页</a>
-    <a href="#about" class="nav-tab" data-nav="about">主理人</a>
-    <a href="#themes" class="nav-tab" data-nav="themes">主题</a>
-    <a href="#flow" class="nav-tab" data-nav="flow">流程</a>
-    <a href="#timeline" class="nav-tab" data-nav="timeline">旅程</a>
-    <a href="#faq" class="nav-tab" data-nav="faq">FAQ</a>
+  <!-- 顶部全宽固定导航 -->
+  <nav class="cc-topbar" aria-label="主导航">
+    <a href="#top" class="cc-topbar-logo">
+      <span class="cc-topbar-mark">☕</span>
+      <span class="cc-topbar-text"><b>郭仔</b><i>Coffee Chat</i></span>
+    </a>
+    <div class="cc-topbar-nav">
+      <a href="#manifesto">宣言</a>
+      <a href="#cases">已办</a>
+      <a href="#about">主理人</a>
+      <a href="#themes">主题</a>
+      <a href="#flow">流程</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="cc-topbar-cta" href="#contact">约下一场 ↗</a>
   </nav>
 
-  <!-- 第一板块：品牌 Hero -->
-  <header class="hero" id="top">
-    <div class="hero-line"></div>
-    <div class="hero-content fade-in-up">
-      <p class="hero-kicker">杭州 · 小范围 · 深度交流</p>
-      <h1 class="hero-title">郭仔 Coffee Chat</h1>
-      <p class="hero-sub">行业跨界交流沙龙</p>
-      <p class="hero-desc">邀请不同行业背景的参与者，以平等分享、互鉴经验为核心，通过线下咖啡场景，实现真实连接与共同成长。</p>
-      <div class="hero-actions" aria-label="快速入口">
-        <a class="hero-cta hero-cta-primary" href="#themes">浏览主题 <span aria-hidden="true">↘</span></a>
-        <a class="hero-cta hero-cta-secondary" href="#about">认识主理人 <span aria-hidden="true">→</span></a>
-      </div>
-      <div class="hero-proof" aria-label="Coffee Chat 活动数据">
-        <div><strong>8</strong><span>场活动</span></div>
-        <div><strong>10–16</strong><span>人小范围</span></div>
-        <div><strong>3</strong><span>个长期主题</span></div>
+  <!-- 首屏：上传的背景图 + 暗蒙版 -->
+  <header class="cc-hero" id="top">
+    <div class="cc-hero-image" aria-hidden="true"></div>
+    <div class="cc-hero-shade" aria-hidden="true"></div>
+
+    <div class="cc-hero-content">
+      <span class="cc-eyebrow">INDUSTRY · OFFLINE · SMALL GROUP</span>
+      <h1 class="cc-headline">
+        12 个人、3 小时，<br>
+        <em>一次真正被听见的</em><br>
+        跨界对谈。
+      </h1>
+      <p class="cc-sub">一个线下的行业跨界交流沙龙。10-15 人围坐一桌，没有主讲人、没有课件——每个人都是输出者，也是倾听者。杭州，几家合作咖啡馆轮流坐。</p>
+      <div class="cc-cta-row">
+        <a class="cc-cta-primary" href="#contact">约下一场 ↗</a>
+        <a class="cc-cta-text" href="#manifesto">为什么是线下 ↓</a>
       </div>
     </div>
-    <a href="#about" class="hero-scroll" aria-label="向下滚动">↓</a>
+
+    <div class="cc-hero-foot" aria-label="核心属性">
+      <span>10-15 人小范围</span>
+      <span>主题深度聚焦</span>
+      <span>杭州线下咖啡</span>
+      <span>真诚需要物理距离</span>
+    </div>
   </header>
 
-  <!-- 第二板块：关于主理人 + 常态化主题 -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section-title">关于主理人</h2>
-      <!-- 海报卡片（点击展开主理人介绍） -->
-      <div class="poster-card reveal" id="posterCard" tabindex="0" role="button" aria-expanded="false" aria-label="点击查看主理人介绍">
-        <div class="poster-image" style="background-image: url('assets/photos/promo-poster.jpg')"></div>
-        <div class="poster-overlay">
-          <span class="poster-hint" id="posterHint">点击查看主理人介绍</span>
-        </div>
-        <div class="poster-detail" id="posterDetail">
-          <div class="poster-detail-inner">
-            <div class="poster-detail-head">
-              <div class="poster-detail-avatar"></div>
-              <div class="poster-detail-meta">
-                <h3>郭仔</h3>
-                <p>Coffee Chat 发起人 · 浙江 · 杭州</p>
-              </div>
-            </div>
-            <div class="poster-detail-body">
-              <p>2026 年裸辞后发起 <strong>Coffee Chat</strong> 项目，以「小范围、有主题、深度对话」为核心形式，邀请不同行业背景的人线下见面交流。</p>
-              <p><strong>已办主题专场：</strong>一人公司专场 · 全女专场 · 自媒体专场 · AI 专场</p>
-              <p><strong>过往嘉宾/参与者（节选）：</strong>涵盖某上市公司 CFO、宠物行业年营收 2 亿企业主、几十万粉丝量级自媒体博主、国货美妆渠道负责人、AI 智能体独立创业者、电气工程师、有从 Vogue 出来的艺人造型师、也有负责 6000 万粉丝帐号的短视频商业化操盘手……</p>
-              <p><strong>活动理念：</strong>拒绝无效社交，坚持小人数制，确保每位参与者都能深度参与对话。相信「真诚需要物理距离」，线下面对面交流是线上无法替代的信任建立方式。</p>
-            </div>
-            <div class="poster-detail-qr">
-              <img src="assets/photos/wechat-qr.jpeg" alt="主理人微信二维码">
-              <span>扫码加好友<br>备注 Coffee Chat</span>
-            </div>
-          </div>
+  <!-- 宣言：暖深色强对比 -->
+  <section class="cc-manifesto" id="manifesto">
+    <div class="cc-manifesto-inner">
+      <span class="cc-eyebrow cc-eyebrow-light">WHY OFFLINE</span>
+      <h2 class="cc-manifesto-h">你不是缺一个社群。<br>你是缺一次<em>认真被人听完的</em> 3 小时。</h2>
+      <p class="cc-manifesto-p">线上能传递信息，线下才能传递温度。坐在一张桌前，喝着咖啡，看着对方的眼睛——你才会说出那些真正想说的话。</p>
+      <div class="cc-signal-row" aria-label="有效连接信号">
+        <span>真正有效的连接信号</span>
+        <b>主动坐到一起</b><i>·</i>
+        <b>开口说卡点</b><i>·</i>
+        <b>被听到</b><i>·</i>
+        <b>线下见</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据带：核心数字 -->
+  <section class="cc-stats-strip" id="proof" aria-label="项目数据">
+    <div>
+      <strong>8<em>场</em></strong>
+      <span>已办 Coffee Chat</span>
+    </div>
+    <div>
+      <strong>120<em>+</em></strong>
+      <span>参与人次</span>
+    </div>
+    <div>
+      <strong>4<em>个</em></strong>
+      <span>常设主题</span>
+    </div>
+    <div>
+      <strong>3<em>小时</em></strong>
+      <span>一场聊透</span>
+    </div>
+  </section>
+
+  <!-- 案例证据：使用现有 8 张活动照片 -->
+  <section class="cc-cases" id="cases">
+    <div class="cc-section-head">
+      <span>01 / THE EVIDENCE</span>
+      <h2>前 8 场 <em>都聊了什么</em>。</h2>
+      <p>这不是广告，是过往 8 场 Coffee Chat 留下的真实记录。照片、主题、人数、参与者的金句——全在这里。</p>
+    </div>
+    <div class="cc-cases-grid" id="cc-cases-grid"></div>
+    <p class="cc-source-note">数据来自过往活动的真实记录。不同主题专场由主理人独立设计和组织。</p>
+  </section>
+
+  <!-- 关于主理人：sticky 双列 -->
+  <section class="cc-about" id="about">
+    <div class="cc-about-sticky">
+      <span>ABOUT THE HOST</span>
+      <h2>不编人设。<br>只撮<em>合对的人</em><br>坐到一张桌前。</h2>
+    </div>
+    <div class="cc-about-copy">
+      <blockquote>「你不需要把自己包装成另一个人。Coffee Chat 做的只是让本来就会聊到一起的人，真的坐到一张桌前。」</blockquote>
+      <p>郭仔，2026 年裸辞后发起 Coffee Chat 项目。每场主题筛选 + 人数控制 + 现场节奏把控——是件体力活，也是一件相信「线下仍然值得」的事。</p>
+      <p><b>已办主题：</b>一人公司专场 · 全女专场 · 自媒体专场 · AI 专场</p>
+      <p><b>过往嘉宾 / 参与者（节选）：</b>上市公司 CFO、宠物行业年营收 2 亿企业主、几十万粉自媒体博主、国货美妆渠道负责人、AI 智能体独立创业者、电气工程师、Vogue 出来的艺人造型师、负责 6000 万粉丝帐号的短视频商业化操盘手……</p>
+
+      <div class="cc-beliefs">
+        <article><b>01</b><span>小范围胜过大场面</span></article>
+        <article><b>02</b><span>有主题胜过自由聊</span></article>
+        <article><b>03</b><span>真诚需要物理距离</span></article>
+        <article><b>04</b><span>付费是最好的筛选器</span></article>
+      </div>
+
+      <div class="cc-host-qr">
+        <img src="assets/photos/wechat-qr.jpeg" alt="郭仔微信二维码">
+        <div>
+          <strong>扫码加主理人微信</strong>
+          <span>下一场 Coffee Chat，给你留个位置。<br>备注「Coffee Chat + 主题」优先入席。</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="themes">
+  <!-- 方法：四个步骤 -->
+  <section class="cc-method" id="method">
+    <div class="cc-section-head cc-section-head-light">
+      <span>02 / THE METHOD</span>
+      <h2>从报名到离场，<br>只做 <em>四件事</em>。</h2>
+    </div>
+    <div class="cc-method-grid">
+      <article>
+        <i>01</i>
+        <h3>主题筛选</h3>
+        <p>报名表里问最关心的两个问题。回答不到位的会婉拒——同频的人，才值得坐在同一桌。</p>
+      </article>
+      <article>
+        <i>02</i>
+        <h3>坐下来先聊</h3>
+        <p>没有主讲人，没有 PPT。先自我介绍——你是谁、在做什么、为什么来。一两分钟，真实就好。</p>
+      </article>
+      <article>
+        <i>03</i>
+        <h3>说出卡点</h3>
+        <p>每个人花 2-3 分钟说出当前最卡的问题。在场的视角比你想象的丰富，问题说出口，答案就松动一半。</p>
+      </article>
+      <article>
+        <i>04</i>
+        <h3>1v1 深入</h3>
+        <p>活动最后 30 分钟自由时间。找刚才最想深聊的人，1v1 把没说完的话继续说。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 活动流程：内嵌完整四步 -->
+  <section class="cc-flow-section" id="flow">
+    <div class="cc-section-head">
+      <span>03 / THE FLOW</span>
+      <h2>3 小时，<em>四步</em>走完一场。</h2>
+      <p>没有主讲人，没有 PPT。从破冰到 1v1 私聊，每一步都是为了让人真的开口。</p>
+    </div>
+    <div class="cc-flow-grid">
+      <div class="cc-flow-card reveal">
+        <div class="cc-flow-card-number">01</div>
+        <h3>轮流自我介绍</h3>
+        <div class="cc-flow-card-time">约 20 分钟</div>
+        <p>每人一两分钟，说说是谁、在做什么、为什么来。不用准备稿子，真实就好。</p>
+      </div>
+      <div class="cc-flow-card reveal">
+        <div class="cc-flow-card-number">02</div>
+        <h3>话题讨论</h3>
+        <div class="cc-flow-card-time">约 90 分钟</div>
+        <p>围绕主题的五个核心话题展开开放式讨论。不是讲座，是一群人围着篝火聊天。</p>
+        <p>没有嘉宾和观众的区分，每个人都是输出者，也是倾听者。</p>
+      </div>
+      <div class="cc-flow-card reveal">
+        <div class="cc-flow-card-number">03</div>
+        <h3>说出卡点</h3>
+        <div class="cc-flow-card-time">约 20-30 分钟</div>
+        <p>这是 Coffee Chat 最有价值的环节。每个人花 2-3 分钟说出当前最卡的一个问题，在场所有人根据自身经历给反馈。</p>
+        <p>问题说出口的那一刻，答案就已经松动了一半。</p>
+      </div>
+      <div class="cc-flow-card reveal">
+        <div class="cc-flow-card-number">04</div>
+        <h3>1v1 深度交流</h3>
+        <div class="cc-flow-card-time">约 30 分钟</div>
+        <p>前面是群聊，这段是私聊。找刚才最想深聊的人，把没说完的话继续说。</p>
+        <p>这段自由时间没有主题限制——关键是找到那个对的人。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常态化主题 -->
+  <section class="section" id="themes" style="background:var(--cc-cream-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <p class="section-kicker">01 / THEMES</p>
       <h2 class="section-title">常态化主题</h2>
-      <p class="section-desc">每场围绕一个主题，深度对谈。</p>
+      <p class="section-desc">THEMES</p>
       <div class="theme-grid" id="theme-grid"></div>
     </div>
   </section>
 
-  <!-- 活动流程 -->
-  <section class="section" id="flow">
-    <div class="container">
-      <h2 class="section-title">活动流程</h2>
-      <p class="section-desc">3 小时，四个环节，每个人都有机会被听到。</p>
-      <div class="theme-grid">
-        <a class="theme-card reveal" href="flow.html">
-          <div class="theme-color-block" style="background:#5B8DBF"></div>
-          <div class="theme-body">
-            <div class="theme-name">📋 Coffee Chat 活动流程</div>
-            <div class="theme-tagline">自我介绍 → 话题讨论 → 说出卡点 → 1v1 深度交流</div>
-          </div>
-          <span class="theme-arrow">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 第三板块：旅程回顾 -->
-  <section class="section" id="timeline">
+  <!-- 旅程回顾 -->
+  <section class="section" id="timeline" style="background:var(--cc-cream-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
       <h2 class="section-title">旅程回顾</h2>
-      <p class="section-desc">从第一杯咖啡到现在，每一场都值得回看。</p>
+      <p class="section-desc">TIMELINE</p>
       <div class="timeline" id="timeline-container"></div>
     </div>
   </section>
 
-  <!-- 第四板块：常见问题 -->
+  <!-- FAQ -->
   <section class="section" id="faq">
     <div class="container">
       <h2 class="section-title">常见问题</h2>
+      <p class="section-desc">FAQ</p>
       <div class="faq" id="faq-container"></div>
     </div>
   </section>
 
-  <!-- 第五板块：感谢观看 -->
+  <!-- 致谢 -->
   <section class="section closing-section" id="thanks">
     <div class="container closing-content">
       <div class="closing-icon">☕</div>
@@ -134,17 +238,17 @@
     </div>
   </section>
 
-  <!-- 页脚 -->
-  <footer class="footer">
+  <!-- 页脚 / 联系 -->
+  <footer class="footer" id="contact">
     <div class="footer-inner">
       <div class="footer-cta">
-        <h3>想来聊聊吗？</h3>
-        <p>下一场 Coffee Chat，给你留个位置。</p>
+        <h3>下一场，给你留个位置。</h3>
+        <p>扫码加主理人微信，备注「Coffee Chat + 主题」，优先入席。</p>
         <div class="footer-qr">
           <img class="footer-qr-img" src="assets/photos/wechat-qr.jpeg" alt="微信二维码">
           <span class="footer-qr-label">扫码加主理人微信</span>
         </div>
-        <a class="footer-btn" href="mailto:hi@coffeechat.club">联系主理人</a>
+        <a class="footer-btn" href="mailto:hi@coffeechat.club">邮件 · hi@coffeechat.club</a>
       </div>
       <div class="footer-meta">
         <p>&copy; 2026 郭仔 Coffee Chat · 行业跨界交流沙龙</p>
@@ -156,13 +260,57 @@
   <script src="assets/app.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 旅程回顾：全部活动，简化模式（仅保留时间、主题、参与人数、金句）
+      // 顶部导航：滚动后加深
+      const topbar = document.querySelector('.cc-topbar');
+      const updateTopbar = () => {
+        if (window.scrollY > 80) topbar.classList.add('is-scrolled');
+        else topbar.classList.remove('is-scrolled');
+      };
+      window.addEventListener('scroll', updateTopbar, { passive: true });
+      updateTopbar();
+
+      // 导航链接 + hero CTA：滚到锚点（避开顶栏遮挡）
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+          const id = a.getAttribute('href').slice(1);
+          if (!id) return;
+          const target = document.getElementById(id);
+          if (!target) return;
+          e.preventDefault();
+          const offset = window.innerWidth < 720 ? 64 : 72;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        });
+      });
+
+      // 案例网格：用真实往期数据
+      const casesGrid = document.getElementById('cc-cases-grid');
+      if (casesGrid) {
+        const featured = activities.slice().reverse();
+        casesGrid.innerHTML = featured.map((item, i) => {
+          const t = getTheme(item.themeSlug);
+          const accent = t ? t.accentColor : '#2E5C8A';
+          return `
+            <article class="cc-case-card reveal" style="transition-delay:${i * 60}ms">
+              <div class="cc-case-photo" style="background-image:url('assets/photos/${item.photo}')">
+                <span class="cc-case-tag" style="background:${accent}">${item.themeName}</span>
+              </div>
+              <div class="cc-case-body">
+                <div class="cc-case-date">${item.dateLabel} · ${item.attendees} 人</div>
+                <h3>${item.highlight}</h3>
+                ${item.quote ? `<blockquote>"${item.quote}"<cite>${item.quoteAuthor || ''}</cite></blockquote>` : ''}
+              </div>
+            </article>`;
+        }).join('');
+      }
+
+      // 旅程时间线
       const timelineContainer = document.getElementById('timeline-container');
       if (timelineContainer) {
         renderTimeline(activities.slice().reverse(), timelineContainer, '', true);
       }
 
-      // 常态化主题：仅显示非隐藏主题
+      // 主题卡
       const themeGrid = document.getElementById('theme-grid');
       if (themeGrid) {
         const visibleThemes = themes.filter(t => !t.hidden);
@@ -178,61 +326,20 @@
         `).join('');
       }
 
-      // 常见问题
+      // FAQ
       const faqContainer = document.getElementById('faq-container');
       if (faqContainer) {
         renderFAQItems(faqParticipate, faqContainer);
       }
 
-      // Tab 导航 scroll-spy：滚动时高亮当前板块
-      const navTabs = document.querySelectorAll('.nav-tab[data-nav]');
-      const sections = ['top', 'about', 'themes', 'flow', 'timeline', 'faq'].map(id => ({
-        id,
-        el: document.getElementById(id)
-      })).filter(s => s.el);
-
-      const updateActiveTab = () => {
-        let current = 'top';
-        const scrollY = window.scrollY + 120;
-        sections.forEach(s => {
-          if (s.el.offsetTop <= scrollY) current = s.id;
-        });
-        navTabs.forEach(tab => {
-          tab.classList.toggle('active', tab.dataset.nav === current);
-        });
-      };
-      window.addEventListener('scroll', updateActiveTab, { passive: true });
-      updateActiveTab();
-
-      // 为动态渲染的 reveal 元素绑定入场动画
+      // 入场动画
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) entry.target.classList.add('visible');
         });
       }, { threshold: 0.15 });
       document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-      // 海报卡片点击展开/收起
-      const posterCard = document.getElementById('posterCard');
-      const posterHint = document.getElementById('posterHint');
-      if (posterCard) {
-        const togglePoster = () => {
-          const isExpanded = posterCard.classList.toggle('expanded');
-          posterCard.setAttribute('aria-expanded', isExpanded);
-          if (posterHint) {
-            posterHint.textContent = isExpanded ? '点击收起' : '点击查看主理人介绍';
-          }
-        };
-        posterCard.addEventListener('click', togglePoster);
-        posterCard.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            togglePoster();
-          }
-        });
-      }
     });
   </script>
-
 </body>
 </html>

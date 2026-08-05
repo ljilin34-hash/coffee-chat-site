@@ -7,76 +7,70 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
   <div class="scroll-progress"></div>
 
-  <!-- 导航栏 -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Coffee Chat</a>
-      <div class="nav-links">
-        <a href="index.html">首页</a>
-        <a href="index.html#themes">主题</a>
-        <a href="about.html">关于</a>
-        <a href="archive.html">往期回顾</a>
-      </div>
-      <button class="nav-toggle" aria-label="菜单">
-        <span></span><span></span><span></span>
-      </button>
+  <nav class="cc-topbar" aria-label="主导航">
+    <a href="index.html#top" class="cc-topbar-logo">
+      <span class="cc-topbar-mark">☕</span>
+      <span class="cc-topbar-text"><b>郭仔</b><i>Coffee Chat</i></span>
+    </a>
+    <div class="cc-topbar-nav">
+      <a href="index.html">首页</a>
+      <a href="index.html#cases">已办</a>
+      <a href="index.html#themes">主题</a>
+      <a href="index.html#flow">流程</a>
+      <a href="index.html#faq">FAQ</a>
     </div>
+    <a class="cc-topbar-cta" href="index.html#contact">约下一场 ↗</a>
   </nav>
-  <div class="nav-overlay"></div>
 
-  <!-- ① 什么是 Coffee Chat -->
-  <section class="section">
+  <section class="cc-pagehero">
     <div class="container">
-      <h2 class="section-title">什么是 Coffee Chat</h2>
-      <div class="about-intro">
-        <div class="about-text">
-          <p>Coffee Chat 是一个行业跨界交流沙龙。邀请不同行业背景的参与者，以平等分享、互鉴经验为核心，通过线下咖啡场景，实现真实连接与共同成长。</p>
-          <p>每场活动 10-15 人，围绕一个主题展开。没有主讲人，没有课件，坐在一张桌前喝着咖啡聊天。从签到破冰到自我介绍，从主题引导到自由交流，最后每人说一个收获——两个小时，每个人都是输出者，也是倾听者。</p>
-          <p>对于轻创业者来说，最缺的不是资源，而是同频的交流对象和真实的经验参照。Coffee Chat 把同样在探索的人聚到一起，聊的是真实踩过的坑、正在卡的点，而不是台上台下的知识灌输。比起大型活动的人脉社交，这种小范围深度对谈更能帮你想明白自己的事。</p>
-        </div>
-        <div class="about-illustration">
-          <div class="circle-table">
-            <div class="circle-center">☕</div>
-            <div class="circle-seat"></div>
-            <div class="circle-seat"></div>
-            <div class="circle-seat"></div>
-            <div class="circle-seat"></div>
-            <div class="circle-seat"></div>
-            <div class="circle-seat"></div>
-          </div>
-        </div>
+      <a href="index.html" class="cc-backlink">← 返回首页</a>
+      <h1>什么是 Coffee Chat</h1>
+      <p>一个线下的行业跨界交流沙龙。10-15 人、主题聚焦、没有主讲人——每个人都是输出者，也是倾听者。</p>
+    </div>
+  </section>
+
+  <section class="cc-page-section cc-page-section-alt">
+    <div class="container">
+      <div class="cc-page-subhead">OUR STORY</div>
+      <h2 class="cc-page-h2">一张桌、几杯咖啡、<em>十几个认真来聊的人</em>。</h2>
+      <p style="font-size:16px;line-height:1.9;color:var(--text);margin-bottom:16px;">
+        Coffee Chat 邀请不同行业背景的参与者，以平等分享、互鉴经验为核心，通过线下咖啡场景，实现真实连接与共同成长。
+      </p>
+      <p style="font-size:16px;line-height:1.9;color:var(--text);margin-bottom:16px;">
+        每场活动 10-15 人，围绕一个主题展开。没有主讲人，没有课件，坐在一张桌前喝着咖啡聊天。从签到破冰到自我介绍，从主题引导到自由交流，最后每人说一个收获——两个小时，每个人都是输出者，也是倾听者。
+      </p>
+      <p style="font-size:16px;line-height:1.9;color:var(--text);">
+        对于轻创业者来说，最缺的不是资源，而是同频的交流对象和真实的经验参照。Coffee Chat 把同样在探索的人聚到一起，聊的是真实踩过的坑、正在卡的点，而不是台上台下的知识灌输。比起大型活动的人脉社交，这种小范围深度对谈更能帮你想明白自己的事。
+      </p>
+    </div>
+  </section>
+
+  <section class="cc-page-section">
+    <div class="container">
+      <div class="cc-page-subhead">THE PRINCIPLES</div>
+      <h2 class="cc-page-h2">我们的理念</h2>
+      <div class="cc-beliefs" style="margin-top:28px;">
+        <article><b>01</b><span>小范围胜过大场面</span></article>
+        <article><b>02</b><span>有主题胜过自由聊</span></article>
+        <article><b>03</b><span>真诚需要物理距离</span></article>
+        <article><b>04</b><span>付费是最好的筛选器</span></article>
       </div>
     </div>
   </section>
 
-  <!-- ② 一场活动的流程 -->
-  <section class="section">
+  <section class="cc-page-section cc-page-section-alt">
     <div class="container">
-      <h2 class="section-title">一场活动的流程</h2>
-      <div class="flow" id="flow-container"></div>
+      <div class="cc-page-subhead">FAQ</div>
+      <h2 class="cc-page-h2">常见疑问</h2>
+      <div class="faq" id="faq-container" style="margin-top:28px;"></div>
     </div>
   </section>
 
-  <!-- ③ 我们的理念 -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">我们的理念</h2>
-      <div class="principles-grid" id="principles-container"></div>
-    </div>
-  </section>
-
-  <!-- ④ 常见疑问 -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">常见疑问</h2>
-      <div class="faq" id="faq-container"></div>
-    </div>
-  </section>
-
-  <!-- 页脚 -->
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="footer-inner">
       <div class="footer-cta">
         <h3>想来聊聊吗？</h3>
@@ -85,10 +79,10 @@
           <img class="footer-qr-img" src="assets/photos/wechat-qr.jpeg" alt="微信二维码">
           <span class="footer-qr-label">扫码加主理人微信</span>
         </div>
-        <a class="footer-btn" href="mailto:hi@coffeechat.club">联系主理人</a>
+        <a class="footer-btn" href="index.html">返回首页</a>
       </div>
       <div class="footer-meta">
-        <p>&copy; 2026 Coffee Chat · 行业跨界交流沙龙</p>
+        <p>&copy; 2026 郭仔 Coffee Chat · 行业跨界交流沙龙</p>
         <p>线下主题交流活动 · 10-15 人小范围深度对谈 · 杭州</p>
       </div>
     </div>
@@ -96,29 +90,25 @@
 
   <script src="assets/app.js"></script>
   <script>
-    // 渲染流程卡片
-    const flowContainer = document.getElementById('flow-container');
-    flowContainer.innerHTML = flowSteps.map(step => `
-      <div class="flow-step reveal">
-        <div class="flow-number">${step.step}</div>
-        <div class="flow-name">${step.name}</div>
-        <div class="flow-desc">${step.desc}</div>
-      </div>
-    `).join('');
+    document.addEventListener('DOMContentLoaded', () => {
+      const topbar = document.querySelector('.cc-topbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 30) topbar.classList.add('is-scrolled');
+        else topbar.classList.remove('is-scrolled');
+      }, { passive: true });
 
-    // 渲染理念卡片
-    const principlesContainer = document.getElementById('principles-container');
-    principlesContainer.innerHTML = principles.map(p => `
-      <div class="principle-card reveal">
-        <div class="principle-keyword">${p.keyword}</div>
-        <div class="principle-desc">${p.desc}</div>
-      </div>
-    `).join('');
+      const faqContainer = document.getElementById('faq-container');
+      if (faqContainer) {
+        renderFAQItems(faqConcept, faqContainer);
+      }
 
-    // 渲染常见疑问（理念层 FAQ）
-    const faqContainer = document.getElementById('faq-container');
-    renderFAQItems(faqConcept, faqContainer);
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
   </script>
-
 </body>
 </html>
