@@ -1023,9 +1023,9 @@ a:hover { color: var(--primary-light); }
   height: 64px;
   border-radius: 50%;
   background-color: var(--primary-light);
-  background-image: url('../assets/photos/promo-poster.jpg');
-  background-size: 250%;
-  background-position: 76% 31%;
+  background-image: url('../assets/photos/host-portrait.jpg');
+  background-size: cover;
+  background-position: center 24%;
   display: flex;
   align-items: center;
   justify-content: center;
