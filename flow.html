@@ -7,81 +7,101 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-
   <div class="scroll-progress"></div>
 
-  <nav class="cc-topbar" aria-label="主导航">
-    <a href="index.html#top" class="cc-topbar-logo">
-      <span class="cc-topbar-mark">☕</span>
-      <span class="cc-topbar-text"><b>郭仔</b><i>Coffee Chat</i></span>
-    </a>
-    <div class="cc-topbar-nav">
-      <a href="index.html">首页</a>
-      <a href="index.html#about">主理人</a>
-      <a href="index.html#cases">已办</a>
-      <a href="index.html#themes">主题</a>
-      <a href="index.html#faq">FAQ</a>
-    </div>
-    <a class="cc-topbar-cta" href="index.html#contact">约下一场 ↗</a>
+  <!-- 导航：Tab 式水平等分 -->
+  <nav class="nav nav-tabs">
+    <a href="index.html" class="nav-tab">首页</a>
+    <a href="index.html#about" class="nav-tab">主理人</a>
+    <a href="index.html#flow" class="nav-tab active">流程</a>
+    <a href="index.html#timeline" class="nav-tab">旅程</a>
+    <a href="index.html#faq" class="nav-tab">FAQ</a>
   </nav>
 
-  <section class="cc-pagehero">
+  <!-- Hero -->
+  <section class="theme-hero">
+    <div class="theme-hero-glow" style="background: radial-gradient(ellipse at center, #5B8DBF, transparent 70%);"></div>
     <div class="container">
-      <a href="index.html#flow" class="cc-backlink">← 返回首页</a>
-      <h1>Coffee Chat <br>活动流程</h1>
-      <p>3 小时，四个环节。没有主讲人、没有 PPT——每个人都是输出者，也是倾听者。</p>
-    </div>
-  </section>
-
-  <section class="cc-page-section cc-page-section-alt">
-    <div class="container">
-      <div class="cc-page-subhead">THE FLOW</div>
-      <h2 class="cc-page-h2">环节一：<em>轮流自我介绍</em></h2>
-      <div class="cc-flow-card reveal" style="max-width: 1180px; margin-bottom: 20px;">
-        <div class="cc-flow-card-number">01</div>
-        <div class="cc-flow-card-time">约 20 分钟</div>
-        <p>没有压力，不用准备，聊到哪算哪。每人一两分钟，说说是谁、在做什么、为什么来。不用准备稿子，不用包装自己，真实就好。</p>
+      <div class="theme-hero-content">
+        <a href="index.html#flow" class="theme-back">← 返回首页</a>
+        <h1 class="theme-hero-title" style="color:#2E5C8A">📋 Coffee Chat 活动流程</h1>
+        <p class="theme-hero-tagline">3 小时，四个环节，每个人都有机会被听到</p>
       </div>
     </div>
   </section>
 
-  <section class="cc-page-section">
+  <!-- 流程详情 -->
+  <section class="section">
     <div class="container">
-      <h2 class="cc-page-h2">环节二：<em>话题讨论</em></h2>
-      <div class="cc-flow-card reveal" style="max-width: 1180px; margin-bottom: 20px;">
-        <div class="cc-flow-card-number">02</div>
-        <div class="cc-flow-card-time">约 90 分钟</div>
-        <p>不同专场都设有五个核心话题，围绕主题展开开放式讨论。不是讲座，也不是问答——更像是一群人围着篝火聊天。每个人根据自己的经历和视角接话、追问。</p>
-        <p>没有「嘉宾」和「观众」的区分，每个人都是输出者，也是倾听者。你的一个疑问，可能恰好是另一个人一直没想明白的事。</p>
+      <p class="theme-journey-label">完整流程 · 约 3 小时</p>
+
+      <!-- 环节一 -->
+      <div class="flow-step-card reveal" style="--accent:#C97B3F">
+        <div class="flow-step-header">
+          <div class="flow-step-number">01</div>
+          <div class="flow-step-info">
+            <div class="flow-step-time">20 分钟</div>
+            <h3 class="flow-step-name">轮流自我介绍</h3>
+          </div>
+        </div>
+        <div class="flow-step-body">
+          <p>没有压力，不用准备，聊到哪算哪。</p>
+          <p>每人一两分钟，说说是谁、在做什么、为什么来。不用准备稿子，不用包装自己，真实就好。</p>
+        </div>
+      </div>
+
+      <!-- 环节二 -->
+      <div class="flow-step-card reveal" style="--accent:#3B4F7A">
+        <div class="flow-step-header">
+          <div class="flow-step-number">02</div>
+          <div class="flow-step-info">
+            <div class="flow-step-time">90 分钟</div>
+            <h3 class="flow-step-name">话题讨论</h3>
+          </div>
+        </div>
+        <div class="flow-step-body">
+          <p>不同专场都设有五个核心话题，围绕主题展开开放式讨论。</p>
+          <p>不是讲座，也不是问答——更像是一群人围着篝火聊天。每个人根据自己的经历和视角接话、追问。</p>
+          <p>没有「嘉宾」和「观众」的区分，每个人都是输出者，也是倾听者。你的一个疑问，可能恰好是另一个人一直没想明白的事。</p>
+        </div>
+      </div>
+
+      <!-- 环节三 -->
+      <div class="flow-step-card reveal" style="--accent:#D4665F">
+        <div class="flow-step-header">
+          <div class="flow-step-number">03</div>
+          <div class="flow-step-info">
+            <div class="flow-step-time">20-30 分钟</div>
+            <h3 class="flow-step-name">说出卡点</h3>
+          </div>
+        </div>
+        <div class="flow-step-body">
+          <p>这是 Coffee Chat 最有价值的环节。</p>
+          <p>每个人花 2-3 分钟，说出自己当前最卡壳的一个问题。说出来之后，在场的人根据自身职业经历和视角给出建议、反馈。</p>
+          <p>很多时候，问题说出口的那一刻，答案就已经松动了一半。</p>
+        </div>
+      </div>
+
+      <!-- 环节四 -->
+      <div class="flow-step-card reveal" style="--accent:#355C7D">
+        <div class="flow-step-header">
+          <div class="flow-step-number">04</div>
+          <div class="flow-step-info">
+            <div class="flow-step-time">30 分钟</div>
+            <h3 class="flow-step-name">1v1 深度交流</h3>
+          </div>
+        </div>
+        <div class="flow-step-body">
+          <p>前面三个环节是「群聊」，最后这段是「私聊」。</p>
+          <p>每个人可以选择活动里最想深入聊的朋友，1v1 单独交流。可能是刚才没说完的话题，可能是某句让你有共鸣的话想接着聊，也可能就是纯粹想加个微信以后联系。</p>
+          <p>这段自由时间没有主题限制，聊什么都可以，关键是——找到那个对的人。</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="cc-page-section cc-page-section-alt">
-    <div class="container">
-      <h2 class="cc-page-h2">环节三：<em>说出卡点</em></h2>
-      <div class="cc-flow-card reveal" style="max-width: 1180px; margin-bottom: 20px;">
-        <div class="cc-flow-card-number">03</div>
-        <div class="cc-flow-card-time">约 20-30 分钟</div>
-        <p>这是 Coffee Chat 最有价值的环节。每个人花 2-3 分钟，说出自己当前最卡壳的一个问题，在场的人根据自身职业经历和视角给出建议、反馈。</p>
-        <p>很多时候，问题说出口的那一刻，答案就已经松动了一半。</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cc-page-section">
-    <div class="container">
-      <h2 class="cc-page-h2">环节四：<em>1v1 深度交流</em></h2>
-      <div class="cc-flow-card reveal" style="max-width: 1180px; margin-bottom: 20px;">
-        <div class="cc-flow-card-number">04</div>
-        <div class="cc-flow-card-time">约 30 分钟</div>
-        <p>前面三个环节是「群聊」，最后这段是「私聊」。每个人可以选择活动里最想深入聊的朋友，1v1 单独交流。可能是刚才没说完的话题，可能是某句让你有共鸣的话想接着聊，也可能就是纯粹想加个微信以后联系。</p>
-        <p>这段自由时间没有主题限制，聊什么都可以，关键是——找到那个对的人。</p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer" id="contact">
+  <!-- 页脚 -->
+  <footer class="footer">
     <div class="footer-inner">
       <div class="footer-cta">
         <h3>想来聊聊吗？</h3>
@@ -102,12 +122,6 @@
   <script src="assets/app.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const topbar = document.querySelector('.cc-topbar');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 30) topbar.classList.add('is-scrolled');
-        else topbar.classList.remove('is-scrolled');
-      }, { passive: true });
-
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) entry.target.classList.add('visible');

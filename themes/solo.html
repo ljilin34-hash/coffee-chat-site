@@ -3,77 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>一人公司专场 - Coffee Chat</title>
+  <title>一人公司 - Coffee Chat</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-
   <div class="scroll-progress"></div>
-
-  <nav class="cc-topbar" aria-label="主导航">
-    <a href="../index.html#top" class="cc-topbar-logo">
-      <span class="cc-topbar-mark">☕</span>
-      <span class="cc-topbar-text"><b>郭仔</b><i>Coffee Chat</i></span>
-    </a>
-    <div class="cc-topbar-nav">
-      <a href="../index.html">首页</a>
-      <a href="../index.html#about">主理人</a>
-      <a href="../index.html#cases">已办</a>
-      <a href="../index.html#themes">主题</a>
-      <a href="../index.html#flow">流程</a>
-      <a href="../index.html#faq">FAQ</a>
+  <!-- 导航栏 -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Coffee Chat</a>
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="../index.html#themes">主题</a>
+        <a href="../about.html">关于</a>
+        <a href="../archive.html">往期回顾</a>
+      </div>
+      <button class="nav-toggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <a class="cc-topbar-cta" href="../index.html#contact">约下一场 ↗</a>
   </nav>
+  <div class="nav-overlay"></div>
 
-  <section class="cc-pagehero" id="themeHero">
+  <!-- ① 主题 Hero -->
+  <section class="theme-hero">
+    <div class="theme-hero-glow" id="themeGlow"></div>
     <div class="container">
-      <a href="../index.html#themes" class="cc-backlink">← 返回主题</a>
-      <h1 id="themeTitle"></h1>
-      <p id="themeTagline"></p>
+      <div class="theme-hero-content">
+        <a href="../index.html#themes" class="theme-back">← 返回主题</a>
+        <h1 class="theme-hero-title" id="themeTitle"></h1>
+        <p class="theme-hero-tagline" id="themeTagline"></p>
+      </div>
     </div>
   </section>
 
-  <section class="cc-page-section cc-page-section-alt">
+  <!-- ② 主题时间线 -->
+  <section class="section">
     <div class="container">
-      <div class="cc-page-subhead">TIMELINE</div>
-      <h2 class="cc-page-h2" id="journeyLabel"></h2>
-      <div class="timeline" id="timeline" style="margin-top:28px;"></div>
+      <p class="theme-journey-label" id="journeyLabel"></p>
+      <div class="timeline" id="timeline"></div>
     </div>
   </section>
 
-  <section class="cc-page-section">
+  <!-- ③ 玩法说明 -->
+  <section class="section">
     <div class="container">
-      <div class="cc-page-subhead">THE PLAY</div>
-      <h2 class="cc-page-h2">这个主题聊什么</h2>
-      <div class="cc-flow-card reveal" style="max-width:860px;margin-top:24px;">
-        <div class="cc-flow-card-number">ABOUT</div>
-        <p id="playDesc" style="margin-top:6px;"></p>
-        <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border);font-size:14px;color:var(--text-light)">
-          <span style="font-weight:700;color:var(--cc-black)">适合谁来：</span><span id="playSuitable"></span>
+      <h2 class="section-title">这个主题聊什么</h2>
+      <div class="theme-play-card reveal">
+        <p class="theme-play-desc" id="playDesc"></p>
+        <div class="theme-play-suitable">
+          <span class="suitable-label">适合谁来：</span><span id="playSuitable"></span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cc-page-section cc-page-section-alt">
+  <!-- ④ 参与者反馈 -->
+  <section class="section">
     <div class="container">
-      <div class="cc-page-subhead">FEEDBACK</div>
-      <h2 class="cc-page-h2">参与者反馈</h2>
-      <div class="quotes-grid" id="quotesGrid" style="margin-top:24px;"></div>
+      <h2 class="section-title">参与者反馈</h2>
+      <div class="quotes-grid" id="quotesGrid"></div>
     </div>
   </section>
 
-  <section class="cc-page-section">
+  <!-- ⑤ 相邻主题导航 -->
+  <section class="section">
     <div class="container">
-      <div class="cc-page-subhead">EXPLORE MORE</div>
-      <h2 class="cc-page-h2">继续探索</h2>
-      <div class="theme-nav" style="margin-top:24px;">
+      <h2 class="section-title">继续探索</h2>
+      <div class="theme-nav">
         <div class="theme-nav-grid" id="themeNav"></div>
       </div>
     </div>
   </section>
 
+  <!-- 页脚 -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-cta">
@@ -86,8 +89,7 @@
         <a href="../index.html" class="footer-btn">报名下一场</a>
       </div>
       <div class="footer-meta">
-        <p>&copy; 2026 郭仔 Coffee Chat · 行业跨界交流沙龙</p>
-        <p>线下主题交流活动 · 10-15 人小范围深度对谈 · 杭州</p>
+        <p>© 2026 Coffee Chat · 行业跨界交流沙龙 · 杭州</p>
       </div>
     </div>
   </footer>
@@ -99,44 +101,78 @@
     const themeActivities = getActivitiesByTheme(THEME_SLUG);
 
     document.title = theme.name + ' - Coffee Chat';
-    document.getElementById('themeTitle').textContent = theme.name;
+
+    // ① Hero
+    document.getElementById('themeGlow').style.background =
+      `radial-gradient(ellipse at center, ${theme.accentColor}, transparent 70%)`;
+    const titleEl = document.getElementById('themeTitle');
+    titleEl.textContent = theme.name;
+    titleEl.style.color = theme.accentColor;
     document.getElementById('themeTagline').textContent = theme.tagline;
 
+    // ② Timeline
     const journeyLabel = document.getElementById('journeyLabel');
     const timelineEl = document.getElementById('timeline');
     if (themeActivities.length > 0) {
-      journeyLabel.textContent = '已办 ' + themeActivities.length + ' 场';
+      journeyLabel.textContent = `这是 ${theme.name}的旅程 · 已办 ${themeActivities.length} 场`;
       renderTimeline(themeActivities, timelineEl, '../');
     } else {
-      journeyLabel.textContent = '即将开启';
-      timelineEl.innerHTML = '<p style="color:var(--text-light);text-align:center;padding:40px 0;">这个主题还在筹备中，敬请期待</p>';
+      journeyLabel.textContent = `这是 ${theme.name}的旅程 · 已办 0 场`;
+      timelineEl.innerHTML = '<p style="color:var(--text-light);text-align:center;padding:var(--space-md) 0;">这个主题还在筹备中，敬请期待</p>';
     }
 
+    // ③ Play card
     document.getElementById('playDesc').textContent = theme.description;
     document.getElementById('playSuitable').textContent = theme.suitableFor;
 
+    // ④ Quotes
     const quotesGrid = document.getElementById('quotesGrid');
     const quoted = themeActivities.filter(a => a.quote);
     quotesGrid.innerHTML = quoted.length > 0
-      ? quoted.map(a => '<div class="quote-card reveal"><blockquote>"' + a.quote + '"</blockquote><cite>&mdash; ' + (a.quoteAuthor || '匿名') + ' · ' + a.dateLabel + '</cite></div>').join('')
-      : '<p style="color:var(--text-light);">这个主题即将开启，期待第一场对话</p>';
+      ? quoted.map(a => `
+        <div class="quote-card reveal">
+          <blockquote>"${a.quote}"</blockquote>
+          <cite>— ${a.quoteAuthor || '匿名'} · ${a.dateLabel}</cite>
+        </div>`).join('')
+      : '<p style="color:var(--text-light);">暂无参与者反馈</p>';
 
+    // ⑤ Theme nav (仅显示非隐藏主题)
     const visibleThemes = themes.filter(t => !t.hidden);
     const idx = visibleThemes.findIndex(t => t.slug === THEME_SLUG);
     const prev = idx > 0 ? visibleThemes[idx - 1] : null;
     const next = idx < visibleThemes.length - 1 ? visibleThemes[idx + 1] : null;
     const themeNav = document.getElementById('themeNav');
     let navHtml = '';
-    if (prev) navHtml += '<a href="./' + prev.slug + '.html" class="theme-nav-card reveal"><span class="theme-nav-dir">← 上一主题</span><span class="theme-nav-name">' + prev.name + '</span></a>';
-    else navHtml += '<div class="theme-nav-card theme-nav-empty"></div>';
-    if (next) navHtml += '<a href="./' + next.slug + '.html" class="theme-nav-card theme-nav-next reveal"><span class="theme-nav-dir">下一主题 →</span><span class="theme-nav-name">' + next.name + '</span></a>';
-    else navHtml += '<div class="theme-nav-card theme-nav-next theme-nav-empty"></div>';
+    if (prev) {
+      navHtml += `<a href="./${prev.slug}.html" class="theme-nav-card reveal">
+        <span class="theme-nav-dir">← 上一主题</span>
+        <span class="theme-nav-name">${prev.name}</span>
+      </a>`;
+    } else {
+      navHtml += '<div class="theme-nav-card theme-nav-empty"></div>';
+    }
+    if (next) {
+      navHtml += `<a href="./${next.slug}.html" class="theme-nav-card theme-nav-next reveal">
+        <span class="theme-nav-dir">下一主题 →</span>
+        <span class="theme-nav-name">${next.name}</span>
+      </a>`;
+    } else {
+      navHtml += '<div class="theme-nav-card theme-nav-next theme-nav-empty"></div>';
+    }
     themeNav.innerHTML = navHtml;
 
-    const topbar = document.querySelector('.cc-topbar');
-    window.addEventListener('scroll', () => { if (window.scrollY > 30) topbar.classList.add('is-scrolled'); else topbar.classList.remove('is-scrolled'); }, { passive: true });
+    // Section titles use theme accent color
+    document.querySelectorAll('.section-title').forEach(el => {
+      el.style.color = theme.accentColor;
+      el.style.borderColor = theme.accentColor;
+    });
 
-    const observer = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.15 });
+    // Observe reveal elements (including dynamically added ones)
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
