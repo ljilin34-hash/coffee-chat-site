@@ -29,6 +29,7 @@ const activities = [
   { id: '006', dateLabel: '7月25日', themeSlug: 'media', themeName: '自媒体专场', highlight: 'IP 和网红的壁垒在哪里', attendees: 12, photo: '0725-media.jpeg', quote: 'IP和网红有很大的壁垒——网红有影响力但不专精，IP是别人需要这样东西能想到这个人。', quoteAuthor: '郭仔', takeaways: ['公域搞流量，私域做转化', '核心内容必须自己写，AI 只做辅助', '别让他觉得你东西很廉价，定价才会让你东西有价值', '先发 100 个视频，90% 的问题都不是问题'] },
   { id: '007', dateLabel: '8月1日', themeSlug: 'ai', themeName: 'AI 专场', highlight: 'AI 时代的护城河', attendees: 16, photo: '0801-solo.jpeg', quote: 'AI 时代的护城河，不是 AI。就像互联网时代没人会说"我会用互联网"是壁垒。真正的壁垒是私有数据、行业理解、商业关系、审美和判断力。', quoteAuthor: '参与者共识', takeaways: ['当所有人都会用 AI，"会用 AI"就不再是护城河了', 'AI 放大的是你的能力，不是你的精力', '问问题的能力，比答问题的能力值钱得多', '150 个粉丝也能一周变现 5000 元——粉丝量不重要，商业关系和私有数据才是关键'] },
   { id: '008', dateLabel: '8月2日', themeSlug: 'media', themeName: '自媒体专场', highlight: '有流量但赚不到钱', attendees: 13, photo: '0802-media.jpeg', quote: '公域搞流量，私域做转化。这句话听过的人很多，做到的人很少。', quoteAuthor: '参与者共识', takeaways: ['150 个粉丝变现 5000+——粉丝体量跟变现是两个概念，关键是粉丝精不精准', 'AI 写的稿子平台能识别并限流，核心内容必须自己写', '定价才会让你的东西有价值，别让别人觉得你东西很廉价', '去年的视频今年混剪再发——每一次刷到都是不同的人'] },
+  { id: '009', dateLabel: '8月8日', themeSlug: 'ai', themeName: 'AI 专场', highlight: 'AI 的边界：0 到 1 还是 1 到 N', attendees: 12, photo: '0808-ai.jpeg', quote: 'AI 只是放大了你自己的商业模式，0 到 1 一定是靠你自己的，AI 是 1 到 N。', quoteAuthor: '参与者共识', takeaways: ['AI 只是放大了你自己的商业模式，0 到 1 一定是靠你自己的，AI 是 1 到 N', '数据是核心，有价值的数据是买来的，买来以后再交给 AI 帮你分析，而不是搜来的那些免费的', 'AI 有边界，别什么都指望它'] },
 ];
 
 // ===== FAQ =====
