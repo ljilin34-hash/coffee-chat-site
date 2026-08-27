@@ -31,6 +31,7 @@ const activities = [
   { id: '008', dateLabel: '8月2日', themeSlug: 'media', themeName: '自媒体专场', highlight: '有流量但赚不到钱', attendees: 13, photo: '0802-media.jpeg', quote: '公域搞流量，私域做转化。这句话听过的人很多，做到的人很少。', quoteAuthor: '参与者共识', takeaways: ['150 个粉丝变现 5000+——粉丝体量跟变现是两个概念，关键是粉丝精不精准', 'AI 写的稿子平台能识别并限流，核心内容必须自己写', '定价才会让你的东西有价值，别让别人觉得你东西很廉价', '去年的视频今年混剪再发——每一次刷到都是不同的人'] },
   { id: '009', dateLabel: '8月8日', themeSlug: 'ai', themeName: 'AI 专场', highlight: 'AI 的边界：0 到 1 还是 1 到 N', attendees: 12, photo: '0808-ai.jpeg', quote: 'AI 只是放大了你自己的商业模式，0 到 1 一定是靠你自己的，AI 是 1 到 N。', quoteAuthor: '参与者共识', takeaways: ['AI 只是放大了你自己的商业模式，0 到 1 一定是靠你自己的，AI 是 1 到 N', '数据是核心，有价值的数据是买来的，买来以后再交给 AI 帮你分析，而不是搜来的那些免费的', 'AI 有边界，别什么都指望它'] },
   { id: '010', dateLabel: '8月15日', themeSlug: 'media', themeName: '自媒体专场', highlight: '个人 IP 的核心与 AI 的定位', attendees: 16, photo: '0815-media.jpeg', quote: '个人 IP 最核心的是什么？是稳定的认知和长期的信任。', quoteAuthor: '参与者共识', takeaways: ['个人 IP 最核心的是稳定的认知和长期的信任', 'AI 最不值钱的能力就是替你写一篇文案', '2026 不是流量最容易的时代，内容是长期资产'] },
+  { id: '011', dateLabel: '8月23日', themeSlug: 'ai', themeName: 'AI 专场', highlight: 'AI 变革的量级与人的温度', attendees: 10, photo: '0823-ai.jpeg', quote: 'AI 带来的生产变革，可能不是堪比互联网革命，而是堪比工业革命。', quoteAuthor: '参与者共识', takeaways: ['AI 带来的生产变革堪比工业革命，是对行业趋势的核心判断', '对想从事的副业不足够了解时，千万别一门心思扎进去，先找到自己的竞争壁垒', '人跟人之间的沟通 AI 很难替代——人有温度，这是人类不可被替代的核心价值'] },
 ];
 
 // ===== FAQ =====
