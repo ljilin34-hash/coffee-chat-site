@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>副业搞钱专场 - Coffee Chat</title>
+  <title>AI 专场 - Coffee Chat</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -96,7 +96,7 @@
 
   <script src="../assets/app.js?v=20260916"></script>
   <script>
-    const THEME_SLUG = 'fuye';
+    const THEME_SLUG = 'ai';
     const theme = getTheme(THEME_SLUG);
     const themeActivities = getActivitiesByTheme(THEME_SLUG);
 
@@ -144,7 +144,7 @@
     const themeNav = document.getElementById('themeNav');
     let navHtml = '';
     if (prev) {
-      navHtml += `<a href="./${prev.slug}.html?v=20260916" class="theme-nav-card reveal">
+      navHtml += `<a href="./${prev.slug}.html" class="theme-nav-card reveal">
         <span class="theme-nav-dir">← 上一主题</span>
         <span class="theme-nav-name">${prev.name}</span>
       </a>`;
@@ -152,7 +152,7 @@
       navHtml += '<div class="theme-nav-card theme-nav-empty"></div>';
     }
     if (next) {
-      navHtml += `<a href="./${next.slug}.html?v=20260916" class="theme-nav-card theme-nav-next reveal">
+      navHtml += `<a href="./${next.slug}.html" class="theme-nav-card theme-nav-next reveal">
         <span class="theme-nav-dir">下一主题 →</span>
         <span class="theme-nav-name">${next.name}</span>
       </a>`;

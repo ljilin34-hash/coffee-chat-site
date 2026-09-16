@@ -82,7 +82,7 @@ function renderTimeline(items, container, basePath = '', simplified = false) {
   container.innerHTML = items.map((item, i) => {
     const theme = getTheme(item.themeSlug);
     const accent = theme ? theme.accentColor : '#2E5C8A';
-    const themeHref = theme && !theme.hidden ? `${themePath}${theme.slug}.html` : '#';
+    const themeHref = theme && !theme.hidden ? `${themePath}${theme.slug}.html?v=20260916` : '#';
     const takeawaysHtml = (!simplified && item.takeaways)
       ? `<div class="timeline-takeaways"><ul>${item.takeaways.map(t => `<li>${t}</li>`).join('')}</ul></div>`
       : '';
