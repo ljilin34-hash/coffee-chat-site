@@ -18,6 +18,7 @@ const themes = [
   { slug: 'media', name: '💻 自媒体专场', tagline: '聊内容、聊人设、聊变现', description: '聊怎么持续产出内容、怎么找到自己的表达风格、怎么面对数据焦虑、怎么从内容到变现。不聊虚的，聊真实踩过的坑和找到的路。', accentColor: '#355C7D', suitableFor: '在做或想做自媒体的人' },
   { slug: 'women', name: '全女专场', tagline: '面向女性从业者的专属交流空间', description: '为女性参与者提供安全、温暖的交流空间。', accentColor: '#D4869A', suitableFor: '想要女性同频交流环境的从业者', hidden: true },
   { slug: 'fuye', name: '💰 副业搞钱专场', tagline: '聊副业怎么从 0 到 1 跑通', description: '围绕副业变现，聊自媒体、跨境等不同路径的真实经验。不聊割韭菜项目，聊普通人能落地的搞钱思路。', accentColor: '#B8860B', suitableFor: '在做或想做副业的人' },
+  { slug: 'conf', name: '行业大会 · 协办', tagline: '协办杭州创业者交流大会', description: '作为协办方参与杭州创业者交流大会，连接更广阔的创业者生态。', accentColor: '#8C6D2F', suitableFor: '杭州创业者', hidden: true },
 ];
 
 // ===== 活动数据（真实往期记录）=====
@@ -34,6 +35,7 @@ const activities = [
   { id: '010', dateLabel: '8月15日', themeSlug: 'media', themeName: '自媒体专场', highlight: '个人 IP 的核心与 AI 的定位', attendees: 16, photo: '0815-media.jpeg', quote: '个人 IP 最核心的是什么？是稳定的认知和长期的信任。', quoteAuthor: '参与者共识', takeaways: ['个人 IP 最核心的是稳定的认知和长期的信任', 'AI 最不值钱的能力就是替你写一篇文案', '2026 不是流量最容易的时代，内容是长期资产'] },
   { id: '011', dateLabel: '8月23日', themeSlug: 'ai', themeName: 'AI 专场', highlight: 'AI 变革的量级与人的温度', attendees: 10, photo: '0823-ai.jpeg', quote: 'AI 带来的生产变革，可能不是堪比互联网革命，而是堪比工业革命。', quoteAuthor: '参与者共识', takeaways: ['AI 带来的生产变革堪比工业革命，是对行业趋势的核心判断', '对想从事的副业不足够了解时，千万别一门心思扎进去，先找到自己的竞争壁垒', '人跟人之间的沟通 AI 很难替代——人有温度，这是人类不可被替代的核心价值'] },
   { id: '012', dateLabel: '8月29日', themeSlug: 'fuye', themeName: '副业搞钱专场', highlight: '自媒体 · 跨境 · 玄学，三话题轮转', attendees: 19, photo: '0829-fuye.jpeg', quote: '', quoteAuthor: '', takeaways: ['三大话题轮流切换小范围讨论：自媒体、跨境、玄学', '19 人齐聚旅行者咖啡，每桌都能深聊自己关心的话题', '不搞大锅饭，小轮转让每个人都聊到自己想聊的方向'] },
+  { id: '013', dateLabel: '9月12日', themeSlug: 'conf', themeName: '杭州创业者交流大会 · 协办', highlight: 'FDE · AI 跨境 · GEO 三大分享 + 项目路演', attendees: 100, photo: '0912-conf.jpeg', quote: '', quoteAuthor: '', takeaways: ['三大分享主题：FDE、AI 跨境、GEO', '四个路演项目：AIGC、出发鸭小程序、AI 眼镜智能硬件、AI Touch 碰一碰', 'Coffee Chat 协办，100 位杭州创业者到场'] },
 ];
 
 // ===== FAQ =====
