@@ -36,6 +36,7 @@ const activities = [
   { id: '011', dateLabel: '8月23日', themeSlug: 'ai', themeName: 'AI 专场', highlight: 'AI 变革的量级与人的温度', attendees: 10, photo: '0823-ai.jpeg', quote: 'AI 带来的生产变革，可能不是堪比互联网革命，而是堪比工业革命。', quoteAuthor: '参与者共识', takeaways: ['AI 带来的生产变革堪比工业革命，是对行业趋势的核心判断', '对想从事的副业不足够了解时，千万别一门心思扎进去，先找到自己的竞争壁垒', '人跟人之间的沟通 AI 很难替代——人有温度，这是人类不可被替代的核心价值'] },
   { id: '012', dateLabel: '8月29日', themeSlug: 'fuye', themeName: '副业搞钱专场', highlight: '自媒体 · 跨境 · 玄学，三话题轮转', attendees: 19, photo: '0829-fuye.jpeg', quote: '', quoteAuthor: '', takeaways: ['三大话题轮流切换小范围讨论：自媒体、跨境、玄学', '19 人齐聚旅行者咖啡，每桌都能深聊自己关心的话题', '不搞大锅饭，小轮转让每个人都聊到自己想聊的方向'] },
   { id: '013', dateLabel: '9月12日', themeSlug: 'conf', themeName: '杭州创业者交流大会 · 协办', highlight: 'FDE · AI 跨境 · GEO 三大分享 + 项目路演', attendees: 100, photo: '0912-conf.jpeg', quote: '', quoteAuthor: '', takeaways: ['三大分享主题：FDE、AI 跨境、GEO', '四个路演项目：AIGC、出发鸭小程序、AI 眼镜智能硬件、AI Touch 碰一碰', 'Coffee Chat 协办，100 位杭州创业者到场'] },
+  { id: '014', dateLabel: '9月15日', themeSlug: 'fuye', themeName: '主理人交流大会', highlight: '主理人的孤独，与链路缺的那一环', attendees: 14, photo: '0915-host.jpeg', quote: '主理人这个身份看起来热闹，其实孤独。活动上人人认识你，活动散了你对着账单算场地费和摄影师钱。办活动的人，很少有机会坐下来被别人认真听一次。', quoteAuthor: '参与者共识', takeaways: ['问题不是你不够努力，是链路缺了一环', '流量是入口，产品是后端，信任是把所有环节串起来的东西', '把跳单的憋屈、为他人做嫁衣的疲惫、没产品的焦虑，都摊在了桌面上'] },
 ];
 
 // ===== FAQ =====
@@ -82,7 +83,7 @@ function renderTimeline(items, container, basePath = '', simplified = false) {
   container.innerHTML = items.map((item, i) => {
     const theme = getTheme(item.themeSlug);
     const accent = theme ? theme.accentColor : '#2E5C8A';
-    const themeHref = theme && !theme.hidden ? `${themePath}${theme.slug}.html?v=20260916` : '#';
+    const themeHref = theme && !theme.hidden ? `${themePath}${theme.slug}.html?v=20260916b` : '#';
     const takeawaysHtml = (!simplified && item.takeaways)
       ? `<div class="timeline-takeaways"><ul>${item.takeaways.map(t => `<li>${t}</li>`).join('')}</ul></div>`
       : '';
