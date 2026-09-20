@@ -154,7 +154,7 @@
     </div>
   </footer>
 
-  <script src="assets/app.js?v=20260920"></script>
+  <script src="assets/app.js?v=20260916b"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // 旅程回顾：全部活动，简化模式（仅保留时间、主题、参与人数、金句）
@@ -168,7 +168,7 @@
       if (themeGrid) {
         const visibleThemes = themes.filter(t => !t.hidden);
         themeGrid.innerHTML = visibleThemes.map((t, i) => `
-          <a class="theme-card reveal" href="themes/${t.slug}.html?v=20260920" style="transition-delay:${i * 80}ms">
+          <a class="theme-card reveal" href="themes/${t.slug}.html?v=20260916b" style="transition-delay:${i * 80}ms">
             <div class="theme-color-block" style="background:${t.accentColor}"></div>
             <div class="theme-body">
               <div class="theme-name">${t.name}</div>
